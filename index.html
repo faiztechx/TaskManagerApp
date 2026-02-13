@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Task Manager</h1>
+            <p class="subtitle">Organize your day, one task at a time</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <form id="task-form" class="task-form">
+                    <input 
+                        type="text" 
+                        id="task-input" 
+                        class="task-input" 
+                        placeholder="Write something Faiz..."
+                        autocomplete="off"
+                        required
+                    >
+                    <button type="submit" class="add-btn" aria-label="Add task">
+                        <span class="add-icon">+</span>
+                    </button>
+                </form>
+            </div>
+
+            <div class="tasks-section">
+                <div class="tasks-header">
+                    <h2>Your Tasks</h2>
+                    <div class="tasks-header-actions">
+                        <span id="task-count" class="task-count">0 tasks</span>
+                        <button id="delete-all-btn" class="delete-all-btn" aria-label="Delete all tasks">
+                            Delete All
+                        </button>
+                    </div>
+                </div>
+                <ul id="tasks-list" class="tasks-list">
+                    <!-- Tasks will be dynamically added here -->
+                </ul>
+                <div id="empty-state" class="empty-state">
+                    <p>No tasks yet. Add one above to get started!</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Made by Mohammad Faiz</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
